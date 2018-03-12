@@ -13,7 +13,6 @@ def index(request):
     if request.method == 'POST':
         form = IdeaForm(request.POST)
         if form.is_valid():
-            print(request.POST)
             challenge, title = None, ""
             r_challenge, r_title = request.POST.get('challenge'), request.POST['title']
             if r_challenge:
