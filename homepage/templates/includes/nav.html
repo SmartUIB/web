@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<div class="drawer mdl-layout__drawer">
+  <nav class="mdl-navigation">
+    <!-- <a class="mdl-navigation__link" href="#projects">Projects</a> -->
+    <a class="mdl-navigation__link" href="#ideas">Ideas</a>
+    <!-- For future use -->
+    <!-- <a class="mdl-navigation__link" href="#stats">Stats</a>
+    <a class="mdl-navigation__link" href="#news">News</a>
+    <a class="mdl-navigation__link" href="#calendar">Calendar</a> -->
+    <div class="drawer-separator"></div>
+    <!-- <span class="mdl-navigation__link" href=""><i class="material-icons">work</i>&nbsp; Work with us</span>
+    <div class="drawer-separator"></div> -->
+    <span class="mdl-navigation__link" href=""><i class="material-icons">school</i>&nbsp; Students</span>
+    <a class="mdl-navigation__link" href="https://github.com/SmartUIB" target="_blank">Open Source Projects</a>
+    <div class="drawer-separator"></div>
+    <span class="mdl-navigation__link" href=""><i class="material-icons">settings</i>&nbsp; Settings</span>
+    {% if user.is_superuser %}
+    <a class="mdl-navigation__link" href="/admin">Admin</a>
+    <a class="mdl-navigation__link" href="{% url 'logout' %}">Sign Out</a>
+    {% else %}
+    <a class="mdl-navigation__link" href="/admin">Sign In</a>
+    {% endif %}
+  </nav>
+</div>

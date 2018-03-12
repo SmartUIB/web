@@ -22,7 +22,7 @@ class Challenge(models.Model):
 
 
 class Idea(models.Model):
-    title = models.CharField(max_length=128)
+    title = models.CharField(max_length=128, blank=True, default="")
     challenge = models.ForeignKey(Challenge, related_name="idea_challenge", null=True)
     description = models.TextField()
     date = models.DateField() 

@@ -1,274 +1,135 @@
+{% extends "layout.html" %}
 {% load staticfiles %}
 
-<!DOCTYPE html>
-<html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Smart UIB</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	<link href="{% static "css/main.css" %}" rel="stylesheet"/>
-	<script src="{% static "js/main.js" %}"></script>
-	
-	<link rel="shortcut icon" type="image/png" href="{% static "img/uib.png" %}"/>
-
-</head>
-<body>
-	<!--[if lt IE 8]>
-	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-
-<header class="container">
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container-fluid">
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li class="active">
-						<a href="#home" data-toggle="tab" aria-expanded="true">
-							<i class="fa fa-home fa-lg" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="">
-						<a href="#ideas" aria-expanded="false">
-							<i class="fa fa-lightbulb-o fa-lg" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="">
-						<a href="#stats" aria-expanded="false">
-							<i class="fa fa-heartbeat fa-lg" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="">
-						<a href="#calendar" aria-expanded="false">
-							<i class="fa fa-calendar fa-lg" aria-hidden="true"></i>
-						</a>
-					</li>
-					<li class="">
-						<a href="#settings" aria-expanded="false">
-							<i class="fa fa-cog fa-lg" aria-hidden="true"></i>
-						</a>
-					</li>
-				</ul>
-				
-				<a href="http://www.uib.es" aria-expanded="false" id="uib-logo" target="_blank">
-					<img src="{% static "img/uib.png" %}" height="40" alt="Change The World">
-				</a>
-				
-				<!-- <ul class="nav navbar-nav navbar-right">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-							<i class="fa fa-user-circle fa-lg" aria-hidden="true"></i>
-						</a>
-						<ul class="dropdown-menu" role="menu">
-							{% if user.is_superuser %}
-								<li><a href="/admin">Admin</a></li>
-							{% endif %}
-							<li><a href="#">Profile</a></li>
-							<li class="divider"></li>
-						</ul>
-					</li>
-				</ul> -->
-			</div><!-- /.navbar-collapse -->
-		</div>
-	</nav>
-</header>
-
-<div class="container">
-
-	<div class="col-lg-12">
-
-		<section id="home" class="row">
-
-			<figure class="col-lg-12 text-center">
-				<img src="{% static "img/changetheworld.png" %}" width="700" alt="Change The World">
-			</figure>
-
-			<header class="col-lg-12">
-				<h2 class="text-center top-bottom-padding">Welcome to our dream. <br>Now help us make it come true.</h2>
-			</header>
-
-			<div class="col-md-offset-2 col-md-6 col-xs-8">
-				<h4>Smart UIB in a nutshell...</h4>
-				<ul>
-					<li>
-					</li>
-				</ul>
-			</div>
-
-			<aside class="col-md-offset-2 col-md-2 col-xs-4 well well-lg">
-				<h4 class="text-center">Download our Quick Guide to Smart UIB</h4>
-				<ul>
-					<li class="active">
-						<a href="#" data-toggle="tab" aria-expanded="true">
-							Student
-						</a>
-					</li>
-					<li class="">
-						<a href="#" data-toggle="tab" aria-expanded="false">
-							BME
-						</a>
-					</li>
-					<li class="">
-						<a href="#" data-toggle="tab" aria-expanded="false">
-							Big
-						</a>
-					</li>
-					<li class="">
-						<a href="#" data-toggle="tab" aria-expanded="false">
-							Admin
-						</a>
-					</li>
-
-				</ul>
-			</aside>
-
-			<div class="col-lg-12 text-center">
-				<button type="button" class="btn btn-primary btn-lg">Learn More</button>
-			</div>
-
-		</section>
-
-		<hr>
-		<section id="news" class="row">
-
-			<header class="col-lg-12">
-				<h3>News</h3>
-			</header>
-
-			<div class="col-lg-12 top-bottom-padding" id="news-list">
-				{% for new in news_list %}
-				
-				<article class="col-sm-4 col-md-3">
-					<a href="{{ new.url }}" target="_blank" class="thumbnail" style="text-decoration: none">
-						<img src="{{ new.media }}" alt="...">
-						<div class="caption text-center">
-							<h4>{{ new.title }}</h4>
-							<p>{{ new.description }}</p>
-						</div>
-					</a>
-				</article>
-				
-				{% endfor %}
-			</div>
-		</section>
-
-		<hr>
-		<section id="ideas" class="row">
-
-			<header class="col-lg-12 top-bottom-padding">
-				<h3 class="text-center">We want your ideas<br>How do we get uni to be smarter?</h3>
-			</header>
-
-			<div class="col-md-offset-2 col-md-4 col-xs-12 top-bottom-padding">
-				{% if form.subject.errors %}
-				<ol>
- 				{% for error in form.subject.errors %}
-					<li><strong>{{ error|escape }}</strong></li>
-					{% endfor %}
-				</ol>
-				{% endif %}
-				<form method="POST" class="post-form">
-					{% csrf_token %}
-					{{ form.as_p }}
-					<div class="form-group">
-						<div class="radio">
-							<label>
-								<input type="radio" name="type" value="private" checked>
-								It's my idea, would love to carry it out.
-							</label>
-						</div>
-						<div class="radio">
-							<label>
-								<input type="radio" name="type" value="public">
-								You are welcome to do whatever you want with it.
-							</label>
-						</div>
-					</div>
-					<button type="submit" class="save btn btn-default">Submit</button>
-				</form>
-			</div>
-
-			<div class="col-md-offset-1 col-md-4 col-xs-12 top-bottom-padding">
-				<div class="panel panel-info">
-					<div class="panel-heading">
-						<h3 class="panel-title text-center">Other ideas</h3>
-					</div>
-					<ul class="list-group" id="ideas-list">
-						{% for idea in ideas_list %}
-						<li class="list-group-item">{% if idea.challenge is None %} {{ idea.title }} {% else %} {{ idea }} {% endif %}</li>
-						{% endfor %}	
-					</ul>
-				</div>
-			</div>
-		</section>
-		
-		<section id="challenges" class="row text-center">
-			<div class="col-lg-8 col-lg-offset-2">
-				<h3>Your ideas can become projects ...</h3>
-					<div class="row">
-						
-						<div class="col-xs-6 col-md-3">
-							<a href="#" class="thumbnail">
-	  							<img src="{% static "img/water.png" %}" width="700" alt="Water">
-	  							<div class="caption">
-	  								<h3>Water</h3>
-	  							</div>
-	  						</a>
-						</div>
-					
-						<div class="col-xs-6 col-md-3">
-							<a href="#" class="thumbnail">
-								<img src="{% static "img/energy.png" %}" width="700" alt="Energy">
-								<div class="caption">
-									<h3>Energy</h3>
-								</div>
-							</a>
-						</div>
-						
-					</div>
-				<h3>... addressing our biggest <b>challenges</b></h3>
-			</div>
-		</section>
-
-	</div>
+{% block main %}
+<a name="top"></a>
+<div class="be-together-section mdl-typography--text-center">
+  <div class="logo-font slogan">welcome to our dream</div>
+  <div class="logo-font sub-slogan">now help us make it come true</div>
+  <div class="logo-font learn">
+     <a href="http://smart.uib.es/" target="_blank">
+    	<button class="mdl-button mdl-button--colored mdl-js-button mld-button--raised">
+    	  Learn more
+    	</button>
+    </a>
+  </div>
 </div>
 
-<footer>
-	<hr>
-	<div class="container text-center">
-		<div class="row">
-			<div class="col-md-4">
-				<h3>Where the heart is</h3>
-				<p>Universitat de les Illes Balears </p>
-  				<p>(University of the Balearic Islands, or UIB) - Balearic Islands,  Spain</p>
-			</div>
-			<div class="col-md-4">
-				<h3>Intensely collaborating</h3>
-				<p>Daniel C. Wahl</p>
-			</div>
-			<div class="col-md-4">
-				<h3 class="center">Contact us</h3>
-				<p><a href="mailto:hello@uib.eu"><i class="fa fa-envelope"></i></span> hello AT uib.eu</a></p>
-				<p><i class="fa fa-phone"></i>+34 ------</p>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-12">
-				<p><small>&copy; 2017 Universitat de les Illes Balears</small></p>
-			</div>
-		</div>
+<!-- <section id="projects" class="idea-section">
+  <div class="idea-band">
+	<div class="idea-band-text">
+	  <div class="mdl-typography--display-2 mdl-typography--font-thin">Your ideas can become projects</div>
+	  <p class="mdl-typography--headline mdl-typography--font-thin">
+		Addressing our biggest challenges
+	  </p>
+	  <p>
+		<a class="mdl-typography--font-regular mdl-typography--text-uppercase alt-link" href="">
+		  See what's new&nbsp;<i class="material-icons">chevron_right</i>
+		</a>
+	  </p>
 	</div>
-</footer>
+  </div>
+</section> -->
 
-</body>
-<html>
+<section id="ideas" class="customized-section">
+  <div class="customized-section-text">
+	<div class="mdl-typography--font-light mdl-typography--display-1-color-contrast">We want your ideas</div>
+	<p class="mdl-typography--font-light">
+		How do we get uni to be smarter?
+	  <br>
+    </p>
+    
+      <form method="POST">
+          {% csrf_token %}
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="text" id="title" name="title">
+            <label class="mdl-textfield__label" for="title">Title of the idea</label>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <textarea class="mdl-textfield__input" type="text" rows="3" id="description" name="description"></textarea>
+              <label class="mdl-textfield__label" for="description">Brief description</label>
+              <span class="mdl-textfield__error">This field is required</span>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="email" id="email" name="email">
+            <label class="mdl-textfield__label" for="email">Contact email</label>
+            <span class="mdl-textfield__error">This field is required</span>
+          </div>
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+              <h5 class="mdl-typography--font-light">Challenges</h5>
+              <ul class="mdl-list">
+                  {% for challenge in challenges %}
+                  <li class="mdl-list__item">
+                    <span class="mdl-list__item-primary-content">
+                      {{ challenge }}
+                    </span>
+                    <span class="mdl-list__item-secondary-action">
+                      <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="list-challenge-{{ forloop.counter }}">
+                        <input type="radio" name="challenge" id="list-challenge-{{ forloop.counter }}" class="mdl-radio__button" value="{{ challenge }}">
+                      </label>
+                    </span>
+                  </li>
+                  {% endfor %}
+                  <hr>
+                  <li class="mdl-list__item">
+                      <label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+                          <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" name="whose">
+                          <span class="mdl-checkbox__label">I want to help develop this idea</span>
+                        </label>
+                  </li>
+              </ul>
+          </div>
+          <br>
+          <button type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Submit</button>
+      </form>
+      
+      <hr>
+  </div>
+</section>
+
+<!--
+<section id="stats" class="screen-section mdl-typography--text-center">
+  <a name="screens"></a>
+  <div class="mdl-typography--display-1-color-contrast">Stats</div>
+      <div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+	  <div class="mdl-card__media">
+		<img src="images/more-from-2.png">
+	  </div>
+	  <div class="mdl-card__title">
+		 <h4 class="mdl-card__title-text">Get a clean customisable home screen</h4>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+		<span class="mdl-typography--font-light mdl-typography--subhead">A clean, simple, customisable home screen that comes with the power of Google Now: Traffic alerts, weather and much more, just a swipe away.</span>
+	  </div>
+	  <div class="mdl-card__actions">
+		 <a class="link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+		   Download now
+		   <i class="material-icons">chevron_right</i>
+		 </a>
+	  </div>
+	</div>
+</section>
+
+<section id="news" class="more-section">
+  <div class="section-title mdl-typography--display-1-color-contrast">News</div>
+  <div class="card-container mdl-grid">
+	<div class="mdl-cell mdl-cell--3-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-card mdl-shadow--3dp">
+	  <div class="mdl-card__media">
+		<img src="{% static "img/more-from-1.png" %}">
+	  </div>
+	  <div class="mdl-card__title">
+		 <h4 class="mdl-card__title-text">Title 1</h4>
+	  </div>
+	  <div class="mdl-card__supporting-text">
+		<span class="mdl-typography--font-light mdl-typography--subhead">Subtitle 1</span>
+	  </div>
+	  <div class="mdl-card__actions">
+		 <a class="link mdl-button mdl-js-button mdl-typography--text-uppercase" href="">
+		   More
+		   <i class="material-icons">chevron_right</i>
+		 </a>
+	  </div>
+	</div>
+  </div>
+</section>-->
+{% endblock %}

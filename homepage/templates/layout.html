@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><html class="no-js" lang=""> <![endif]-->
+{% include "includes/head.html" %}
+<body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+    	<!--[if lt IE 8]>
+    	<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    	<![endif]-->
+
+        {% include "includes/header.html" %}
+        {% include "includes/nav.html" %}
+    
+        <div class="content mdl-layout__content">
+            {% block main %}{% endblock %}
+            {% include "includes/footer.html" %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% load staticfiles %}
+<header class="header mdl-layout__header mdl-layout__header--waterfall">
+  <div class="mdl-layout__header-row">
+	<!-- Add spacer, to align navigation to the right in desktop -->
+	<div class="header-spacer mdl-layout-spacer"></div>
+	<!-- Navigation -->
+	<div class="navigation-container">
+	  <nav class="navigation mdl-navigation">
+        <!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#projects">Projects</a> -->
+		<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#ideas">Ideas</a>
+        <!-- For future use-->
+		<!-- <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#stats">Stats</a>
+		<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#news">News</a>
+		<a class="mdl-navigation__link mdl-typography--text-uppercase" href="#calendar">Calendar</a> -->
+	  </nav>
+	</div>
+	<span class="mobile-title mdl-layout-title">
+	  <img class="logo-image" src="{% static "img/uib.png" %}">
+	</span>
+    
+	<button class="more-button mdl-button mdl-js-button mdl-button--icon mdl-js-ripple-effect" id="more-button">
+	  <i class="material-icons">more_vert</i>
+	</button>
+	<ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right mdl-js-ripple-effect" for="more-button">
+        {% if user.is_superuser %}
+	  <li class="mdl-menu__item"><a href="/admin">Admin</a></li>
+	  <li class="divider"></li>
+	  <li class="mdl-menu__item"><a href="{% url 'logout' %}">Sign Out</a></li>
+      {% else %}
+      <li class="mdl-menu__item"><a href="/admin">Sign In</a></li>
+      {% endif %}
+	</ul>
+    
+  </div>
+</header>
